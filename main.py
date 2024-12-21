@@ -1,11 +1,12 @@
-stroka1 = str(input("vvedite slovo "))
-stroka2 = str(input("vvedite slovo2 "))
-index = 0
-for i in stroka1:#i проходит по первой строке
-    if i in stroka2:#если i есть во второй строке
-        index += 1
-if index == len(stroka1): #если index равен длине stroka1
-    print("да они амнкраш")
+stroka1 = input("Введите слово 1: ")
+stroka2 = input("Введите слово 2: ")
+
+stroka1 = stroka1.lower()
+stroka2 = stroka2.lower()
+
+is_anagram = all(char in stroka2 for char in stroka1)
+
+if is_anagram:
+    print("Да, они анаграммы.")
 else:
-    print("нет они не амнкраш")
-                
+    print("Нет, они не анаграммы.")
