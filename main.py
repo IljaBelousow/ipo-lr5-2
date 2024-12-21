@@ -4,9 +4,9 @@ stroka2 = input("Введите слово 2: ")
 stroka1 = stroka1.lower()
 stroka2 = stroka2.lower()
 
-is_anagram = all(char in stroka2 for char in stroka1)
+anagram = all(i in stroka2 for i in stroka1)
 
-if is_anagram:
-    print("Да, они анаграммы.")
+if anagram:
+    print("они анаграммы.")
 else:
-    print("Нет, они не анаграммы.")
+    print("они не анаграммы.")
